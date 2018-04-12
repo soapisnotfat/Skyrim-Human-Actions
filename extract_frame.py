@@ -17,9 +17,7 @@ def process_videos(video_list=all_videos):
 
             for i in range(1, 11):
                 video_name = './' + video + '/' + video + '_' + str(i) + '.mp4'
-                destination = './frames/' + video + '/'
-                if not os.path.exists(destination):
-                    os.makedirs(destination)
+                destination = './frames/' + video + '_'
                 get_frame(video_name, destination)
 
 
@@ -31,8 +29,6 @@ def get_frame(video, directory):
     FFMPEG_BIN = "ffmpeg"
 
     dest_directory = directory
-    if not os.path.exists(dest_directory):
-        os.makedirs(dest_directory)
 
     fps = '20'
 
@@ -41,7 +37,7 @@ def get_frame(video, directory):
 
     # Run the parser to generate the frame images
     # resize images to 240p
-    os.system(FFMPEG_BIN + " -i " + video + " -vf scale=240:240" + " -r " + fps + " " + dest_directory + dest + "-%03d.png")
+    os.system(FFMPEG_BIN + " -i " + video + " -vf scale=240:240" + " -r " + fps + " " + dest_directory + dest + "_%03d.png")
 
 
 if __name__ == '__main__':

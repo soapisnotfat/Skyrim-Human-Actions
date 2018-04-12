@@ -2,7 +2,7 @@
 This is a human action dataset collected from Elder Scrolls V: Skyrim.
 
 
-# Categories
+## Categories
 This dataset contains **10** categories: 5 of them are the categories included in UCF101, and the other 5 categories are not. Each catefory has 10 videos, and each video lasts 5 seconds. The resolution of all videos is 320x180. The native frames per second is 30.
 
 5 included in UCF101
@@ -33,3 +33,18 @@ This dataset contains **10** categories: 5 of them are the categories included i
     - https://www.youtube.com/watch?v=5lc_Aki3vvc
 - waving weapon
     - https://www.youtube.com/watch?v=M3pKL6Ch1aU
+
+
+## frame extraction
+I provided the frame extraction file within this dataset.
+
+Requirement:
+    - python3
+    - opencv
+    - ffmpeg
+
+
+#### Usage
+```bash
+$ python3 extract_frame.py
+```
