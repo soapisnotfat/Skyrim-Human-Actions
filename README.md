@@ -39,9 +39,9 @@ This dataset contains **10** categories: 5 of them are the categories included i
 I provided the frame extraction file within this dataset.
 
 Requirement:
-    - python3
-    - opencv
-    - ffmpeg
+- python3
+- opencv
+- ffmpeg
 
 
 #### Usage
